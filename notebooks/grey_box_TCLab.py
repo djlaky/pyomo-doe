@@ -211,6 +211,10 @@ def compare_reactor_doe():
             pyo.value(doe_obj.model.objective)
         )
     )
+    print("\nOriginal")
+    results_summary(np.array(doe_obj.results["FIM"]))
+    print("\nGrey Box")
+    results_summary(np.array(doe_obj_grey_box.results["FIM"]))
 
     #print(doe_obj.results["Experiment Design Names"])
 
